@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>STAR BATTLE</title>
+    <link rel="icon" href="images/logo.png">
+</head>
+<link rel="stylesheet" href="css/public.css">
+<link rel="stylesheet" href="css/ranking.css">
+<link rel="stylesheet" href="css/gameover.css">
+<link rel="stylesheet" href="css/gamestart.css">
+<link rel="stylesheet" href="css/Instructions.css">
+<link rel="stylesheet" href="css/in_game.css">
+<link rel="stylesheet" href="css/player.css">
+<link rel="stylesheet" href="css/headaniamte.css">
+<script src="js/jquery-3.2.1.js"></script>
+<body>
+     
+     
+     
+     
+     
+      <article class="gamebg" id="headnimate" style="display: block;">
+            <img src="images/aniamte.png" class="game_aniamte">
+        </article>
+     
+     
+     
+     
+      
+      <!-- In_game -->
+    <article class="gamebg" id="in_game" style="display: none;">
+       
+                    
+        <!-- SCORE AND TIME AND DIRECTION -->
+       <div class="direction" style="margin-top:470px;margin-left:30px;position: absolute;z-index: 1200;">
+            <div class="top"><img  id="key_up" src="images/TOP.png" alt=""></div>
+            <div class="bottom"><img id="key_left"  src="images/LEFT.png" alt=""> <img src="images/BOTTOM.png" id="key_bottom"  alt=""> <img src="images/RIGHT.png"  id="key_right" alt=""></div>
+        </div>   
+        
+        <div class="setting">
+            <img id="pause" style="width: 17px;height: 25px;" src="images/PAUSE.png" alt="">
+            <img id="sound" src="images/sound.png" alt="">
+            <img id="fontPlus" src="images/A+.png" alt="">
+            <img id="fontSub" src="images/A-.png" alt="">
+        </div>    
+        <div class="fuel">
+            <img style="float:left;"src="images/Fule.png" alt="">
+            <span style="margin-left:10px;margin-top:3px;font-size: 16px;float:left; color: white;" class="gamefont" id="fule">15</span>
+        </div>
+           
+             
+            <div class="score_all">
+                <span class="time" id="gametime">Time:0s</span>
+                
+                <span class="score" id="score">Score:0</span>
+            </div>
+         <div class="bigall">
+                <div class="big-planet"><img src="images/001-global.png" alt=""></div>
+                <div class="big-planet"><img src="images/002-travel.png" alt="" style="margin-top:-100px;"></div>
+                <div class="big-planet"><img src="images/006-mars.png" alt="" style="margin-top:-300px;"></div>
+                <div class="big-planet"><img src="images/012-jupiter.png" alt=""></div>
+                <div class="big-planet"><img src="images/009-saturn.png" style="width: 403px;height: 232px;" alt=""></div>
+        </div>
+        
+        <div class="smallall">
+            <div class="small-planet"><img src="images/005-science.png" alt=""></div>
+            <div class="small-planet"><img src="images/007-planet-earth-1.png" alt="" style="margin-top: 50px;"></div>
+            <div class="small-planet"><img src="images/science-1.png" alt="" style="margin-top:100px;"></div>
+            <div class="small-planet"><img src="images/011-planet-earth.png" alt="" style="margin-top:50px;"></div>
+            <div class="small-planet"><img src="images/science2.png" alt="" style="margin-top:0px;"></div>
+        </div>
+        
+
+        
+        
+        <div class="GameArea" id="GameArea" style="position: absolute;z-index: 1100;">
+           
+            <div class="me" id="player" style="margin-top:200px;"></div>    
+            
+            
+    
+            
+        </div>
+        
+    </article>
+      
+      
+      
+      
+      
+      
+       <!-- Instructions -->
+      <article class="gamebg" id="Instructions" style="display: none;">
+            <!-- title -->
+        <div class="ranking_title margin-auto" style="width:540px;margin-left:210px;">
+            <img src="images/logo.png" alt="logo">
+            <span class="gamefont">Instructions</span>
+        </div>
+           
+        <div class="me" id="player_animate" style="margin-top: 160px;margin-left:670px;"></div>
+        <span class="ins_f" style="margin-top:185px;">You</span>
+        <div class="enemy" id="enemy_animate" style="margin-top: 255px;margin-left:670px;"></div>
+         <span class="ins_f" style="margin-top:275px;">Enemy</span>
+        <div class="friend" id="friend_animate" style="margin-top: 345px;margin-left:670px;"></div>
+        <span class="ins_f" style="margin-top:365px;">Friendly</span>
+        <img style="display: block;position: absolute;margin-top: 445px;margin-left:685px;" src="images/P.png">
+        <span class="ins_f" style="margin-top:449px;">PAUSE</span>
+        <img style="display: block;position: absolute;margin-top: 515px;margin-left:586px;" src="images/SPACHE.png">
+        <span class="ins_f" style="margin-top:519px;">Attack</span>
+        <div class="instructions_font">
+            <span>Move the spaceship using the sensible areas in the screen;</span>
+            <div class="direction">
+                <div class="top"><img src="images/TOP.png" alt=""></div>
+                <div class="bottom"><img src="images/LEFT.png" alt=""> <img src="images/BOTTOM.png" alt=""> <img src="images/RIGHT.png" alt=""></div>
+            </div>
+            <span>The fuel counter show the remain fuel; <img src="images/Fule.png" alt=""> 30 </span>
+            <span>If the spaceship hits a asteroid or another spaceship, 
+you lose 15 points of fuel;</span>
+       
+       <span>Enemy spaceship needs 1 shot to be destroyed, you will get
+5 points for each enemy destroyed;</span>
+       
+       <span>Asteroid needs 2 shots to be destroyed, you will get 10 points
+for each asteroid destroyed;</span>
+       
+       
+      <span>If you destroy a friendly spaceship, you lose 10 points;</span>
+        </div>   
+        
+        <!-- OK Play Game -->
+        <div id="ok_button" class="start_game_button left gamefont" style="width:320px;margin-top:25px;margin-left:130px;">
+            <img style="margin-left:90px;" src="images/science-1.png" alt="play game">
+            <span>OK</span>
+        </div>
+    </article>
+   
+     
+     
+     
+      <!-- Game Start -->
+   <article class="gamebg" id="gamestart" style="display: none;">
+            <!-- title -->
+        <div class="game_start_title">
+            <img src="images/logo.png" style="margin-left:98px;width: 254px;" alt="">
+            <span class="gamefont">STAR BATTLE</span>
+        </div>
+            
+        <!-- Start Play Game -->
+        <div id="gamestart_button" class="start_game_button left gamefont" style="margin-top:75px;margin-left:330px;">
+            <img src="images/science2.png" alt="play game">
+            <span>Start</span>
+        </div>
+        <div class="enemy" style="margin-left:710px;margin-top:200px;">
+        </div>
+        
+        <div id="Instructions_button" class="start_game_button left gamefont" style="margin-top:25px;margin-left:310px;width: 340px;" id="game_start_game_play">
+            <img style="margin-left:20px;" src="images/aestroid_brown.png" alt="play game">
+            <span>Instructions</span>
+        </div>
+    </article>
+   
+   
+   
+   
+   
+   
+    <!-- Game Over -->
+    <article class="gamebg" id="gameover" style="display: none;">
+            <!-- title -->
+        <div class="ranking_title margin-auto" style="width:500px;margin-left:220px;">
+            <img src="images/logo.png" alt="logo">
+            <span class="gamefont">Game Over</span>
+        </div>
+        <!-- Score -->
+        <div style="width: 960px;float:left;margin-top: 30px; text-align: center;">
+            <span class="GameOver_Score_Show gamefont">
+                Time:<span id="game_over_time">10s</span> Score:<span id="game_over_score">20 </span>
+            </span>
+            
+        </div>
+        
+        <!-- Name Input-->
+          <input id="name_input" class="gameover_name_input gamefont" type="text" placeholder="Name">
+          <span id="loading_text" class="gamefont loading_text" >Loading...</span>
+        <!-- Continue Play Game -->
+        <div id="continue_button" class="start_game_button left gamefont" style="width:320px;margin-top:25px;margin-left:330px;">
+            <img style="margin-left:40px;" src="images/science-1.png" alt="play game">
+            <span>Continue</span>
+        </div>
+    </article>
+    
+    
+    <!-- Ranking -->
+    <article class="gamebg" id="ranking" style="display: none;">
+            <!-- title -->
+        <div class="ranking_title margin-auto">
+            <img src="images/logo.png" alt="logo">
+            <span class="gamefont">Ranking</span>
+        </div>
+        <!-- ranking list -->
+        <div  class="ranking_list gamefont">
+            <table id="ranking_list">
+              <tr class="ranking_list_title"><th>Position</th><th>Name</th><th>Score</th><th>Time</th></tr>
+
+               
+             </table>
+        </div>
+        <!-- Start Play Game -->
+        <div class="start_game_button left gamefont" id="ranking_play_game" style="margin-top:25px;margin-left:330px;">
+            <img src="images/science2.png" alt="play game">
+            <span>Start</span>
+        </div>
+    </article>
+</body>
+<script src="js/variable.js"></script>
+<script src="js/function.js"></script>
+<script src="js/set.js"></script>
+<script src="js/fule.js"></script>
+
+<script src="js/player.js"></script>
+<script src="js/enemy.js"></script>
+<script src="js/friendly.js"></script>
+<script src="js/meteorites.js"></script>
+
+<script src="js/switch.js"></script>
+<script src="js/time.js"></script>
+<script src="js/fule.js"></script>
+<script src="js/upload.js"></script>
+<script src="js/animate.js"></script>
+
+<script src="js/main.js"></script>
+
+
+
+
+</html>

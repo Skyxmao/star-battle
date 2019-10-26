@@ -1,0 +1,45 @@
+
+/* Ranking */
+   /* title */
+.ranking_title{
+    width: 400px;
+    height: 77px;
+    float:left;
+    margin-left:280px;
+    margin-top: 30px;
+
+}
+.ranking_title img{
+    float:left;
+    width: 113px;
+}
+.ranking_title span{
+    margin-left: 17px;
+    float:left;
+    font-size: 60px;
+    color: white;
+    display: block;
+}
+     /*List*/
+.ranking_list{
+    float:left;
+    width: 640px;
+    height: 370px;
+    border-radius: 10px;
+    background: #303136;
+    margin-left: 158px;
+    color: white;
+    margin-top: 15px;
+    text-align: center;
+}
+.ranking_list_title th:nth-child(1){
+   border-left:none;
+}
+.ranking_list_title th{
+    width: 160px;
+    height: 50px;
+    border-left:1px solid #424349;
+}
+.ranking_list_tr td{
+    height: 29px;
+}

@@ -1,0 +1,19 @@
+.instructions_font{
+    width: 580px;
+    height: 360px;
+    float:left;
+    margin-left: 55px;
+    margin-top: 10px;
+    color: white;
+    font-size: 17px;
+    font-family: gamefont;
+}
+.instructions_font span{
+    margin-top: 8px;
+    display: block;
+    float:left;
+}
+.ins_f{
+    font-size: 24px;color:white;font-family: gamefont;display: block; position: absolute;
+    margin-left:780px;
+}

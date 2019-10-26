@@ -1,0 +1,123 @@
+@keyframes bigmove{
+    from{
+        margin-left:1200px;
+    }
+    to{
+        margin-left:-6000px;
+    }
+}
+.bigall{
+    display: block;
+    z-index: 2;
+    width: 6000px;
+    position: absolute;
+    margin-left:1200px;
+    animation: bigmove 50s linear 0s infinite normal;
+}
+.big-planet:nth-child(1){
+    margin-left:0px;
+}
+.big-planet{
+    margin-left:1000px;
+    margin-top: 180px;
+    width: 400px;
+    height: 400px;
+    float:left;
+}
+.big-planet img{
+    width: 400px;
+    height: 400px;
+}
+
+
+
+@keyframes smallmove{
+    from{
+        margin-left:1200px;
+    }
+    to{
+        margin-left:-3000px;
+    }
+}
+.smallall{
+    display: block;
+    z-index: 1;
+    animation: smallmove 100s linear 0s infinite normal;
+    position: absolute;
+    width: 3000px;
+    margin-left: 1200px;
+}
+.small-planet:nth-child(1){
+    margin-left: 0px;
+}
+.small-planet{
+    float: left;
+    width: 47px;
+    height: 47px;
+    margin-left:500px;
+}
+
+
+/* KEY */
+#key_up:hover,#key_bottom:hover,#key_left:hover,#key_right:hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.setting{
+    z-index: 1200;
+    width: 190px;
+    height: 30px;
+    position:absolute;
+    margin-left:18px;
+    margin-top:18px;
+}
+.setting img{
+    margin-left:20px;
+    cursor: pointer;
+}
+.fuel{
+    position: absolute;
+    margin-top: 70px;
+     margin-left:38px;
+    z-index: 1200;
+}
+
+@keyframes metani{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.meteorites{
+   width: 100px;
+   height: 100px;
+    position: absolute;
+    display: block;
+    z-index: 1100;
+    animation: metani 10s linear 0s infinite normal;
+}
+/* Score */
+.score_all{
+    width: 500px;
+    height: 38px;
+    position: absolute;
+    font-family: gamefont;
+    color: white;
+    font-size: 36px;
+    margin-left:305px;
+    margin-top:8px;
+    z-index: 1999;
+}
+
+
+
+/*player_bullet*/
+.player_bullet{
+    position: absolute;
+    height: 28px;
+    width: 102px;
+}
+

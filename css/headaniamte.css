@@ -1,0 +1,18 @@
+@keyframes fly{
+    from{
+        margin-left:1000px;
+        margin-top: -100px;
+    }
+    to{
+        margin-top: 800px;
+        margin-left:-800px;
+        width: 500px;
+    }
+}
+.game_aniamte{
+    position: absolute;
+    display: block;
+    width: 100px;
+    margin-left:850px;
+    animation: fly 5S;
+}

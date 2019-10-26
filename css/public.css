@@ -1,0 +1,124 @@
+/* Public */
+*{
+    padding: 0;
+    margin: 0;
+}
+/*The Font*/
+@font-face{
+    font-family:gamefont;
+    src:url("../font/Audiowide-Regular.ttf");
+}
+/* animate */
+@keyframes bganimate{
+    form{background-position: 0 0; }
+    to {background-position: -960px 0; }
+}
+.gamefont{
+    font-family: gamefont;
+}
+.gamebg{
+    width: 960px;
+    height: 600px;
+    margin: 0 auto;
+    background: url(../images/background.png);
+    animation: bganimate 5s linear 0s infinite normal;
+    position: relative;
+    overflow: hidden;
+}
+.margin-auto{
+    margin:auto;
+}
+.left{
+    float:left;
+}
+/* Play Game */
+.start_game_button{
+    width: 300px;
+    height: 60px;
+    background: #f19e0d;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+}
+.start_game_button:after{
+  content: ' ';
+  position: absolute;
+  margin: auto;
+  width: 0%;
+  height: 100%;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10%;
+  opacity: 1;
+  transition: 0s;
+}
+.start_game_button:hover:after{
+    opacity: 0;
+    width: 100%;
+    transition: 1s;
+}
+.start_game_button img{
+    float:left;
+   width: 48px;
+    margin-left:70px;
+    margin-top:6px;
+}
+.start_game_button span{
+    margin-top: 7px;
+    float:left;
+    display: block;
+    color: white;
+    font-size: 36px;
+    margin-left: 10px;
+}
+/* Enemy */
+.enemy{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    background: url(../images/ship_1.png);
+    display: block;
+    z-index: 999;
+}
+.me{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    background: url(../images/ship_2.png);
+    transform: rotateY(180deg);
+    display: block;
+    z-index: 999;
+}
+
+.friend{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    background: url(../images/ship_3.png);
+    display: block;
+    z-index: 999;
+}
+
+/* KEY */
+.direction{
+    float:left;
+    width: 174px;
+    height: 101px;
+    margin-left: 164px;
+    margin-top: 10px;
+    display: block;
+    z-index: 1200;
+}
+.direction .top{
+    margin-left:61px;
+    margin-bottom: 6px;
+}
+.direction .bottom img:nth-child(1){
+    margin-left: 0px;
+}
+.direction .bottom img{
+    margin-left:6px;
+}
